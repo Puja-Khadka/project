@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: antiquewhite; color: aqua;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //  const data=document.createElement('li')
+    // console.log(data);
+ 
+   
+  // data.innerHTML='css '
+  // data.innerText='HTML'
+   //document.querySelector('.language').appendChild(data)
+   
+    
+    // function addLanguage(langName){
+    //  const li=   document.createElement('li')
+    //  li.innerHTML=`${langName}`
+    //  document.querySelector('.language').appendChild(li)
+
+    // }
+    // addLanguage('css')
+    // addLanguage('html')
+    // addLanguage('php')
+
+
+    function addopttiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addopttiLanguage('css')
+
+    //Edit
+   const secondLang= document.querySelector('li:nth-child(1)')
+   // secondLang.innerHTML='puja'
+   const newli=document.createElement('li')
+   newli.textContent='santu'
+   secondLang.replaceWith(newli)
+
+   //remove
+   const lastLang=document.querySelector('li:last-child')
+   lastLang.remove()
+</script>
+</html>
