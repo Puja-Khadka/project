@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        .btn{
+            background-color: blue;
+            color: white;
+            border: 2px solid black;
+
+        }
+        .btn:hover{
+            background-color: black;
+        }
+        p{
+            color: darkgreen;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .box{
+            width: 90px;
+            height: 90px;
+            background-color: blueviolet;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>hello guys .i am going to build a samll project which is about events using javascript .  </h1>
+    <button class="btn">click me</button>
+    <p class="p"></p> -->
+    <!-- <input type="button" value="Changr Background" onclick="changrBackground()" > -->
+     <button onclick="changrBackground()"  >changrBackground</button>
+     <div class="box" onmouseover="onMouseOver()" onmouseout="onnMouseOut()" onmousedown="onMouseDown()" onmouseup="onMouseUp()"></div>
+     <input type="text" onkeydown="onKeyDown()" onkeyup="onKeyUp()">
+</body>
+<script>
+//     const ph=document.querySelector('.p')
+//     document.querySelector('.btn').addEventListener('click',function(e){
+//          ph.innerHTML='this is small project on events'
+        
+//    } )
+function changrBackground(){
+    document.body.style.backgroundColor='blue'
+}
+function onMouseOver(){
+    document.body.style.backgroundColor='red'
+}
+function onnMouseOut(){
+     document.body.style.backgroundColor='white'
+}
+function  onMouseDown(){
+   //  document.body.style.backgroundColor='green'
+}
+function onMouseUp(){
+     document.body.style.backgroundColor='yellow'
+}
+function onKeyDown(){
+     document.body.style.backgroundColor='green'
+}
+function onKeyUp(){
+     document.body.style.backgroundColor='grey'
+}
+</script>
+</html>
