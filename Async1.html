@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Color changing </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // const sayDate=function(){
+    //     console.log('puja',Date.now());
+        
+    // }
+    const randomColor=function(){
+         const hex='0123456789ABCDEF'
+        let color='#'
+        for(let i=0;i<6;i++){
+            color+=hex[Math.floor(Math.random()*16)]
+        }
+        return color
+    }
+    //console.log(randomColor);
+    
+    let intervalid
+     document.querySelector('#start').addEventListener('click',function(){
+     
+    intervalid= setInterval(function(){
+        document.body.style.backgroundColor=randomColor()
+     },1000) 
+    })
+    
+   
+    
+    
+
+     document.querySelector('#stop').addEventListener('click',function(){
+     console.log('stopped');
+     
+       clearInterval(intervalid);
+    
+    })
+    
+</script>
+</html>
