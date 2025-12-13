@@ -3,38 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>digital clock</title>
-    <style>
-        body{
-            background-color: rgb(0, 255, 17);
-        }
-       .center{
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-       }
-       #banner{
-        font-size: larger;
-        font-weight: bolder;
-       }
-       .clock{
-        /* height: 10px; */
-        /* width: 60px; */
-        background-color: blue;
-        margin: 20px;
-        padding: 20px 50px;
-        border-radius: 10px;
-       }
-
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="center">
-        <div id="banner"><span>Your local time</span></div>
-        <div class="clock"></div>
-    </div>
+    <h1>number:0</h1>
+    <button onclick="updatenumber()">click me</button>
 </body>
-<script src="js.js"></script>
+<script>
+    let count=0
+    function updatenumber(){
+        count++
+        document.querySelector('h1').innerHTML= `number :${count}`
+    }
+</script>
 </html>
